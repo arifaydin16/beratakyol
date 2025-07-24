@@ -4,54 +4,54 @@ const AllProducts = () => {
     return (
         <div className='p-4 px-2 lg:px-8 xl:px-32 inter-500'>
 
-            <div className='flex h-fit flex rounded-lg border w-full md:w-fit border-gray-200 text-sm'>
+            <div className='flex h-fit flex rounded-lg border w-full md:w-fit border-gray-200 text-sm overflow-hidden'>
                 <div className='px-3 p-1 flex items-center justify-center border-r border-gray-200'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="m21 21l-4-4m2-6a8 8 0 1 1-16 0a8 8 0 0 1 16 0" /></svg>
                 </div>
-                <input type="text" className='p-2 outline-none w-full lg:w-[10vw]' placeholder='Ürün Ara' />
+                <input type="text" className='p-2 outline-none w-full lg:w-[10vw] dark:bg-stone-800' placeholder='Ürün Ara' />
             </div>
             <div className="mt-12">
                 <div className="flex overflow-x-auto items-center gap-4 justify-evenly">
-                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2'>
+                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2'>
                         <img src="/netflix2.png" className='w-[120px] h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">Netflix Hediye Kartları</div>
                     </div>
-                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2'>
+                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2'>
                         <img src="/amazon.png" className='w-[120px] h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">Amazon Hediye Kartları</div>
                     </div>
-                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2'>
+                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2'>
                         <img src="/steam.png" className='w-[120px] h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">Steam Hediye Kartları</div>
                     </div>
-                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2'>
+                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2'>
                         <img src="/netflix2.png" className='w-[120px] h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">Netflix Hediye Kartları</div>
                     </div>
-                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2'>
+                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2'>
                         <img src="/amazon.png" className='w-[120px] h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">Amazon Hediye Kartları</div>
                     </div>
-                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2'>
+                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2'>
                         <img src="/steam.png" className='w-[120px] h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">Steam Hediye Kartları</div>
                     </div>
-                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2'>
+                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2'>
                         <img src="/netflix2.png" className='w-[120px] h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">Netflix Hediye Kartları</div>
                     </div>
-                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2'>
+                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2'>
                         <img src="/amazon.png" className='w-[120px] h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">Amazon Hediye Kartları</div>
                     </div>
-                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2'>
+                    <div className='rounded-lg flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2'>
                         <img src="/steam.png" className='w-[120px] h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">Steam Hediye Kartları</div>
                     </div>
                 </div>
                 <div className="flex mt-12 max-md:overflow-x-auto items-center gap-4 justify-evenly">
 
-                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
+                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
                         <img src="/gta5.jpg" className='w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">PC Oyunları</div>
                         <div className="flex items-center gap-2">
@@ -62,7 +62,7 @@ const AllProducts = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
+                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
                         <img src="/gta5.jpg" className='w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">PC Oyunları</div>
                         <div className="flex items-center gap-2">
@@ -73,7 +73,7 @@ const AllProducts = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
+                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
                         <img src="/gta5.jpg" className='w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">PC Oyunları</div>
                         <div className="flex items-center gap-2">
@@ -84,7 +84,7 @@ const AllProducts = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
+                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
                         <img src="/gta5.jpg" className='w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">PC Oyunları</div>
                         <div className="flex items-center gap-2">
@@ -95,7 +95,7 @@ const AllProducts = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
+                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
                         <img src="/gta5.jpg" className='w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">PC Oyunları</div>
                         <div className="flex items-center gap-2">
@@ -106,7 +106,7 @@ const AllProducts = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
+                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
                         <img src="/gta5.jpg" className='w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">PC Oyunları</div>
                         <div className="flex items-center gap-2">
@@ -117,7 +117,7 @@ const AllProducts = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
+                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
                         <img src="/gta5.jpg" className='w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">PC Oyunları</div>
                         <div className="flex items-center gap-2">
@@ -128,7 +128,7 @@ const AllProducts = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-1/3 items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
+                    <div className='rounded-4xl flex flex-col md:w-auto max-md:min-w-[50%] items-center justify-center border border-gray-200 p-2 px-2 md:px-8'>
                         <img src="/gta5.jpg" className='w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-full object-cover' alt="" />
                         <div className="mt-2 font-bold text-center text-lg">PC Oyunları</div>
                         <div className="flex items-center gap-2">

@@ -1,26 +1,31 @@
 import React from 'react'
+import { disallowedTopMenu } from '../layout'
 
 const Footer = () => {
     return (
-        <footer className='mt-12 inter-500'>
-            <div className='bg-gray-100 p-4 overflow-x-auto flex justify-evenly md:gap-0 gap-12'>
-                <img src="/amazon.png" className='h-16' alt="" />
-                <img src="/steam.png" className='h-16' alt="" />
-                <img src="/xbox.png" className='h-16' alt="" />
-                <img src="/lol.png" className='h-16' alt="" />
-                <img src="/apple.png" className='h-16' alt="" />
-                <img src="/playstation.png" className='h-16' alt="" />
-                <img src="/microsoftstore.png" className='h-16' alt="" />
-            </div>
+        <footer className='mt-48 inter-500'>
+            {
+                !disallowedTopMenu.includes(window.location.pathname) ?
+                    <div className='bg-gray-100 dark:bg-stone-800 p-3 overflow-x-auto flex justify-evenly md:gap-0 gap-12'>
+                        <img src="/amazon.png" className='h-12' alt="" />
+                        <img src="/steam.png" className='h-12' alt="" />
+                        <img src="/xbox.png" className='h-12' alt="" />
+                        <img src="/lol.png" className='h-12' alt="" />
+                        <img src="/apple.png" className='h-12' alt="" />
+                        <img src="/playstation.png" className='h-12' alt="" />
+                        <img src="/microsoftstore.png" className='h-12' alt="" />
+                    </div>
+                    : ''
+            }
 
-            <div className="my-20 px-24 flex items-center justify-end">
-                <a href='#' className="w-9 h-9 flex items-center justify-center rounded-lg text-white bg-[var(--primary)]">
+            <div className="my-12 px-24 flex items-center justify-end">
+                <a href='#' className="w-9 h-9 hidden md:flex items-center justify-center rounded-lg text-white bg-[var(--primary)]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z" /></svg>
                 </a>
             </div>
 
             <div className='py-8 pb-12 px-2 lg:px-8 xl:px-32 border-t-2 border-[var(--primary)]'>
-                <img src="/pinatapin.png" className='h-20' alt="" />
+                <img src="/pinatapin.png" className='h-10 md:h-14' alt="" />
 
                 {/* Masaüstü */}
                 <div className="mt-12 hidden md:grid grid-cols-4">
@@ -102,14 +107,14 @@ const Footer = () => {
 
 
                 <div className="flex mt-4 items-center justify-center gap-4">
-                    <img src="/instagram.png" className='h-14' alt="" />
-                    <img src="/youtube.png" className='h-14' alt="" />
-                    <img src="/facebook.png" className='h-14' alt="" />
-                    <img src="/xcom.png" className='h-14' alt="" />
-                    <img src="/linkedin.png" className='h-14' alt="" />
+                    <img src="/instagram.png" className='h-10' alt="" />
+                    <img src="/youtube.png" className='h-10' alt="" />
+                    <img src="/facebook.png" className='h-10' alt="" />
+                    <img src="/xcom.png" className='h-10' alt="" />
+                    <img src="/linkedin.png" className='h-10' alt="" />
                 </div>
 
-                <p className="mt-4 max-w-1/3 text-xs text-center mx-auto">Copyright © 2025 - Pinatapin Pinatapin.com, Brain Information Technologies markası olup, tüm hakları saklıdır.</p>
+                <p className="mt-4 max-w-1/3 text-[10px] md:text-xs text-center md:mb-0 mb-10 mx-auto">Copyright © 2025 - Pinatapin Pinatapin.com, Brain Information Technologies markası olup, tüm hakları saklıdır.</p>
             </div>
         </footer>
     )

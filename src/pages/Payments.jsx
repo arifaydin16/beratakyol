@@ -34,15 +34,15 @@ const Payments = () => {
     return (
         <ProfileLayout>
             <div className="col-span-3 rounded-4xl pb-12">
-                <div className="flex justify-between items-center">
-                    <div className='flex h-fit hidden md:flex rounded-lg border border-gray-200 text-sm'>
+                <div className="flex justify-between items-center gap-2">
+                    <div className='flex overflow-hidden h-fit max-w-full max-md:flex-1 rounded-lg border border-gray-200 text-sm'>
                         <div className='px-3 p-1 flex items-center justify-center border-r border-gray-200'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="m21 21l-4-4m2-6a8 8 0 1 1-16 0a8 8 0 0 1 16 0" /></svg>
                         </div>
-                        <input type="text" className='p-2 outline-none' placeholder='Arama...' />
+                        <input type="text" className='p-2 outline-none dark:bg-stone-800' placeholder='Arama...' />
                     </div>
-                    <div className='flex h-fit hidden md:flex rounded-lg border border-gray-200 text-sm'>
-                        <input type="date" className='p-2 outline-none' placeholder='Arama...' />
+                    <div className='flex overflow-hidden h-fit max-w-full w-auto rounded-lg border border-gray-200 text-sm'>
+                        <input type="date" className='p-2 outline-none dark:bg-stone-800' placeholder='Arama...' />
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@ const Payments = () => {
                                         payment?.status === 'DECLINED' ?
                                             <div className="flex flex-col items-center justify-center">
                                                 <svg className='bg-white text-red-500 p-1 rounded-full' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor"><path d="M17 11.805c0-.346 0-.519.052-.673c.151-.448.55-.621.95-.803c.448-.205.672-.307.895-.325c.252-.02.505.034.721.155c.286.16.486.466.69.714c.943 1.146 1.415 1.719 1.587 2.35c.14.51.14 1.044 0 1.553c-.251.922-1.046 1.694-1.635 2.41c-.301.365-.452.548-.642.655a1.27 1.27 0 0 1-.721.155c-.223-.018-.447-.12-.896-.325c-.4-.182-.798-.355-.949-.803c-.052-.154-.052-.327-.052-.672zm-10 0c0-.436-.012-.827-.364-1.133c-.128-.111-.298-.188-.637-.343c-.449-.204-.673-.307-.896-.325c-.667-.054-1.026.402-1.41.87c-.944 1.145-1.416 1.718-1.589 2.35a2.94 2.94 0 0 0 0 1.553c.252.921 1.048 1.694 1.636 2.409c.371.45.726.861 1.363.81c.223-.018.447-.12.896-.325c.34-.154.509-.232.637-.343c.352-.306.364-.697.364-1.132z" /><path d="M20 10.5V9c0-3.866-3.582-7-8-7S4 5.134 4 9v1.5m16 7c0 4.5-4 4.5-8 4.5" /></g></svg>
-                                                <div className="text-gray-500 text-xs text-center">Desteğe Bağlan</div>
+                                                <div className="text-gray-500 text-xs text-center">Desteğe <br />Bağlan</div>
                                             </div>
                                             :
                                             <div className="flex flex-col items-center justify-center">

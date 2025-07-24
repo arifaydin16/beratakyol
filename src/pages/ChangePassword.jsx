@@ -15,11 +15,11 @@ const ChangePassword = () => {
                     <form className='p-4 flex flex-col gap-4 px-2 lg:px-60 xl:px-72 py-24'>
                         <div>
                             <div className="text-gray-500 text-sm">Şifre</div>
-                            <input type="password" className='p-2 outline-none bg-white rounded-lg border border-gray-200 w-full' placeholder='******' />
+                            <input type="password" className='p-2 outline-none bg-white dark:bg-stone-800 rounded-lg border border-gray-200 w-full' placeholder='******' />
                         </div>
                         <div>
                             <div className="text-gray-500 text-sm">Şifre Tekrar</div>
-                            <input type="password" className='p-2 outline-none bg-white rounded-lg border border-gray-200 w-full' placeholder='******' />
+                            <input type="password" className='p-2 outline-none bg-white dark:bg-stone-800 rounded-lg border border-gray-200 w-full' placeholder='******' />
                         </div>
 
                         <button type="submit" className="bg-[var(--primary)] w-full rounded-lg p-3 text-white cursor-pointer hover:bg-[var(--primary-light)] duration-200">Oluştur</button>

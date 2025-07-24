@@ -3,13 +3,13 @@
 const ProfileLayout = ({ children }) => {
     return (
         <div className='p-4 px-2 lg:px-8 xl:px-32 inter-500'>
-            <div className="p-2 bg-gradient-to-r from-[var(--primary-light)] to-[var(--primary)] rounded-lg shadow-lg shadow-gray-500 relative">
+            <div className={`p-2 px-4 xl:px-12 bg-gradient-to-r from-[var(--primary-light)] to-[var(--primary)] rounded-lg shadow-lg shadow-gray-500 relative ${window.location.pathname === '/add-balance' ? 'hidden' : ''}`}>
                 <img src="/pattern1.png" alt="" className="absolute left-0 top-0 w-full h-full object-cover opacity-30" />
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2">
                         <div className="relative">
-                            <div className="w-24 md:w-36 h-24 md:h-36 relative rounded-full">
-                                <div className="absolute w-8 h-8 bg-white right-0 bottom-0 flex items-center justify-center rounded-full">
+                            <div className="w-12 md:w-28 md:h-28 h-12 relative rounded-full">
+                                <div className="absolute w-6 p-1 h-6 md:w-8 md:h-8 bg-white right-0 bottom-0 flex items-center justify-center rounded-full">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className='text-[var(--primary)]' viewBox="0 0 24 24">
                                         <path fill="currentColor" d="M5 19h1.425L16.2 9.225L14.775 7.8L5 17.575zm-2 2v-4.25L16.2 3.575q.3-.275.663-.425t.762-.15t.775.15t.65.45L20.425 5q.3.275.438.65T21 6.4q0 .4-.137.763t-.438.662L7.25 21zM19 6.4L17.6 5zm-3.525 2.125l-.7-.725L16.2 9.225z" /></svg>
                                 </div>
@@ -20,7 +20,9 @@ const ProfileLayout = ({ children }) => {
                             <div className="font-bold text-white text-lg md:text-2xl">Ad Soyad</div>
                         </div>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="98" className='text-white z-2' height="98" viewBox="0 0 24 24">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="98" className='text-white z-2 hidden md:inline' height="98" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12 12q-1.65 0-2.825-1.175T8 8t1.175-2.825T12 4t2.825 1.175T16 8t-1.175 2.825T12 12m-8 8v-2.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13t3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20zm2-2h12v-.8q0-.275-.137-.5t-.363-.35q-1.35-.675-2.725-1.012T12 15t-2.775.338T6.5 16.35q-.225.125-.363.35T6 17.2zm6-8q.825 0 1.413-.587T14 8t-.587-1.412T12 6t-1.412.588T10 8t.588 1.413T12 10m0 8" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" className='text-white z-2 inline md:hidden' height="64" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M12 12q-1.65 0-2.825-1.175T8 8t1.175-2.825T12 4t2.825 1.175T16 8t-1.175 2.825T12 12m-8 8v-2.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13t3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20zm2-2h12v-.8q0-.275-.137-.5t-.363-.35q-1.35-.675-2.725-1.012T12 15t-2.775.338T6.5 16.35q-.225.125-.363.35T6 17.2zm6-8q.825 0 1.413-.587T14 8t-.587-1.412T12 6t-1.412.588T10 8t.588 1.413T12 10m0 8" /></svg>
                 </div>
             </div>

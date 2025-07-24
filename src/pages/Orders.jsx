@@ -84,15 +84,15 @@ const Orders = () => {
     return (
         <ProfileLayout>
             <div className="col-span-3 rounded-4xl pb-12">
-                <div className="flex justify-between items-center">
-                    <div className='flex h-fit max-w-1/2 rounded-lg border border-gray-200 text-sm'>
+                <div className="flex justify-between items-center gap-2">
+                    <div className='flex overflow-hidden h-fit max-w-full max-md:flex-1 rounded-lg border border-gray-200 text-sm'>
                         <div className='px-3 p-1 flex items-center justify-center border-r border-gray-200'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="m21 21l-4-4m2-6a8 8 0 1 1-16 0a8 8 0 0 1 16 0" /></svg>
                         </div>
-                        <input type="text" className='p-2 outline-none' placeholder='Arama...' />
+                        <input type="text" className='p-2 outline-none dark:bg-stone-800' placeholder='Arama...' />
                     </div>
-                    <div className='flex h-fit max-w-1/2 rounded-lg border border-gray-200 text-sm'>
-                        <input type="date" className='p-2 outline-none' placeholder='Arama...' />
+                    <div className='flex overflow-hidden h-fit max-w-full w-auto rounded-lg border border-gray-200 text-sm'>
+                        <input type="date" className='p-2 outline-none dark:bg-stone-800' placeholder='Arama...' />
                     </div>
                 </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Select = ({ icon, data, placeholder, className, dropdown }) => {
+const Select = ({ icon, data, placeholder, className, textAlign }) => {
     const [tabActive, setTabActive] = useState(false);
     return (
         <div className={`p-1 px-2 inter-500 relative rounded-lg text-sm border border-gray-200 flex items-center gap-4 ${className ? className : ''}`}>
@@ -11,7 +11,7 @@ const Select = ({ icon, data, placeholder, className, dropdown }) => {
             </div>
             {
                 tabActive ?
-                    <div className="absolute z-10 w-max min-w-full text-center justify-center top-0 left-1/2 translate-x-[-50%] p-2 bg-white border border-gray-200 top-[40px] rounded-lg flex flex-col gap-4">
+                    <div className={`absolute z-10 w-max min-w-full justify-center top-0 left-1/2 translate-x-[-50%] p-2 bg-white dark:bg-stone-800 border border-gray-200 top-[40px] rounded-lg flex flex-col gap-4 ${textAlign ? textAlign : 'text-center'}`}>
                         {
                             data ? data?.map((item, index) => (
                                 <div key={index} className="flex w-full items-center gap-2">

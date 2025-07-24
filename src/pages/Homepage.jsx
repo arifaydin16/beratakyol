@@ -3,20 +3,49 @@ import GameCard from '../components/GameCard'
 
 const Homepage = () => {
     const [activeBlogTab, setActiveBlogTab] = useState('CAMPAIGNS');
+    const [mobileSliderTab, setMobileSliderTab] = useState('/banner_image.jpg');
+    function onSliderChange(src) {
+        const mainSlider = document.getElementById('main-slider');
+        if (mainSlider) {
+            setMobileSliderTab(src)
+            mainSlider.style.transform = 'translateX(-100vw)';
+            setTimeout(() => {
+                mainSlider.querySelector('img').src = src;
+                setTimeout(() => {
+                    mainSlider.style.transitionDuration = '0ms';
+                    mainSlider.style.transform = 'translateX(100vw)';
+                }, 0);
+                setTimeout(() => {
+                    mainSlider.style.transitionDuration = '500ms';
+                    mainSlider.style.transform = 'translateX(0vw)';
+
+                }, 500);
+            }, 500);
+
+        }
+    }
     return (
         <div className='p-4 px-2 lg:px-8 xl:px-32'>
-            <div className='p-4 rounded-4xl md:rounded-lg gap-4 items-center bg-gray-100 flex'>
-                <div className='flex-4/6 h-[50vh]'>
-                    <img src="/banner_image.jpg" className='rounded-4xl md:rounded-lg object-cover object-center h-full overflow-hidden w-full' alt="" />
-                </div>
-                <div className="flex-2/6 gap-2 hidden md:flex flex-col h-[50vh]">
-                    <div className="flex-1 overflow-hidden">
-                        <img src="/banner_image.jpg" className='rounded-lg object-cover object-center h-full overflow-hidden w-full' alt="" />
+            <div>
+                <div className='p-4 md:rounded-4xl max-md:rounded-lg gap-4 items-center bg-white dark:bg-stone-800 bg-gray-100 flex'>
+                    <div id='main-slider' className='w-full relative md:w-4/6 h-[50vh] duration-500'>
+                        <div className="my-2 flex absolute bottom-0 left-1/2 -translate-x-1/2 md:hidden items-center gap-4 justify-center text-gray-200">
+                            <svg onClick={() => onSliderChange('/banner_image.jpg')} className={mobileSliderTab === '/banner_image.jpg' ? 'text-[var(--primary)]' : ''} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22" /></svg>
+                            <svg onClick={() => onSliderChange('/campaign.jpg')} className={mobileSliderTab === '/campaign.jpg' ? 'text-[var(--primary)]' : ''} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22" /></svg>
+                            <svg onClick={() => onSliderChange('/gta5.jpg')} className={mobileSliderTab === '/gta5.jpg' ? 'text-[var(--primary)]' : ''} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22" /></svg>
+                        </div>
+                        <img src="/banner_image.jpg" className='rounded-3xl md:rounded-lg object-cover object-center h-full overflow-hidden w-full' alt="" />
                     </div>
-                    <div className="flex-1 overflow-hidden">
-                        <img src="/banner_image.jpg" className='rounded-lg object-cover object-center h-full overflow-hidden w-full' alt="" />
+                    <div className="w-2/6 gap-2 hidden md:flex flex-col h-[50vh]">
+                        <div className="flex-1 overflow-hidden">
+                            <img src="/banner_image.jpg" className='rounded-lg object-cover object-center h-full overflow-hidden w-full' alt="" />
+                        </div>
+                        <div className="flex-1 overflow-hidden">
+                            <img src="/banner_image.jpg" className='rounded-lg object-cover object-center h-full overflow-hidden w-full' alt="" />
+                        </div>
                     </div>
                 </div>
+
             </div>
 
 
@@ -29,39 +58,39 @@ const Homepage = () => {
             </div>
 
             <div className='hidden md:flex justify-between items-center gap-8'>
-                <div className='rounded-lg flex flex-col items-center justify-center border border-gray-200 p-2'>
+                <div className='rounded-lg flex flex-col dark:bg-gray-200 dark:text-stone-900 items-center justify-center border border-gray-200 p-2'>
                     <img src="/netflix2.png" className='w-[60px] h-[60px] rounded-full object-cover' alt="" />
                     <div className="mt-2 font-bold text-center text-lg">Netflix Hediye Kartları</div>
                 </div>
-                <div className='rounded-lg flex flex-col items-center justify-center border border-gray-200 p-2'>
+                <div className='rounded-lg flex flex-col dark:bg-gray-200 dark:text-stone-900 items-center justify-center border border-gray-200 p-2'>
                     <img src="/amazon.png" className='w-[60px] h-[60px] rounded-full object-cover' alt="" />
                     <div className="mt-2 font-bold text-center text-lg">Amazon Hediye Kartları</div>
                 </div>
-                <div className='rounded-lg flex flex-col items-center justify-center border border-gray-200 p-2'>
+                <div className='rounded-lg flex flex-col dark:bg-gray-200 dark:text-stone-900 items-center justify-center border border-gray-200 p-2'>
                     <img src="/steam.png" className='w-[60px] h-[60px] rounded-full object-cover' alt="" />
                     <div className="mt-2 font-bold text-center text-lg">Steam Hediye Kartları</div>
                 </div>
-                <div className='rounded-lg flex flex-col items-center justify-center border border-gray-200 p-2'>
+                <div className='rounded-lg flex flex-col dark:bg-gray-200 dark:text-stone-900 items-center justify-center border border-gray-200 p-2'>
                     <img src="/netflix2.png" className='w-[60px] h-[60px] rounded-full object-cover' alt="" />
                     <div className="mt-2 font-bold text-center text-lg">Netflix Hediye Kartları</div>
                 </div>
-                <div className='rounded-lg flex flex-col items-center justify-center border border-gray-200 p-2'>
+                <div className='rounded-lg flex flex-col dark:bg-gray-200 dark:text-stone-900 items-center justify-center border border-gray-200 p-2'>
                     <img src="/amazon.png" className='w-[60px] h-[60px] rounded-full object-cover' alt="" />
                     <div className="mt-2 font-bold text-center text-lg">Amazon Hediye Kartları</div>
                 </div>
-                <div className='rounded-lg flex flex-col items-center justify-center border border-gray-200 p-2'>
+                <div className='rounded-lg flex flex-col dark:bg-gray-200 dark:text-stone-900 items-center justify-center border border-gray-200 p-2'>
                     <img src="/steam.png" className='w-[60px] h-[60px] rounded-full object-cover' alt="" />
                     <div className="mt-2 font-bold text-center text-lg">Steam Hediye Kartları</div>
                 </div>
-                <div className='rounded-lg flex flex-col items-center justify-center border border-gray-200 p-2'>
+                <div className='rounded-lg flex flex-col dark:bg-gray-200 dark:text-stone-900 items-center justify-center border border-gray-200 p-2'>
                     <img src="/netflix2.png" className='w-[60px] h-[60px] rounded-full object-cover' alt="" />
                     <div className="mt-2 font-bold text-center text-lg">Netflix Hediye Kartları</div>
                 </div>
-                <div className='rounded-lg flex flex-col items-center justify-center border border-gray-200 p-2'>
+                <div className='rounded-lg flex flex-col dark:bg-gray-200 dark:text-stone-900 items-center justify-center border border-gray-200 p-2'>
                     <img src="/amazon.png" className='w-[60px] h-[60px] rounded-full object-cover' alt="" />
                     <div className="mt-2 font-bold text-center text-lg">Amazon Hediye Kartları</div>
                 </div>
-                <div className='rounded-lg flex flex-col items-center justify-center border border-gray-200 p-2'>
+                <div className='rounded-lg flex flex-col dark:bg-gray-200 dark:text-stone-900 items-center justify-center border border-gray-200 p-2'>
                     <img src="/steam.png" className='w-[60px] h-[60px] rounded-full object-cover' alt="" />
                     <div className="mt-2 font-bold text-center text-lg">Steam Hediye Kartları</div>
                 </div>
@@ -86,8 +115,8 @@ const Homepage = () => {
 
             </div>
             <div className="w-full inter-500 flex justify-between">
-                <h3 className='my-6 !font-bold text-xl'>Popüler PC Oyunları</h3>
-                <a href='#' className="flex hover:text-[var(--primary)] duration-200 items-center gap-2">
+                <h3 className='my-6 !font-bold text-xl'>Tüm Ürünler</h3>
+                <a href='/products' className="flex hover:text-[var(--primary)] duration-200 items-center gap-2">
                     <div className="text-xs">Tümünü Gör</div>
                     <svg className='text-[var(--primary)]' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
                 </a>
@@ -106,16 +135,16 @@ const Homepage = () => {
 
 
             <div className="hidden md:grid grid-cols-4 rounded-lg overflow-hidden mt-8 bg-[var(--primary-light)] inter-500">
-                <div onClick={()=>setActiveBlogTab('CAMPAIGNS')} className={`rounded-lg cursor-pointer hover:bg-[var(--primary)]/60 duration-200 font-bold w-full text-center p-2 text-white ${activeBlogTab === 'CAMPAIGNS' ? 'bg-[var(--primary)]' : 'bg-[var(--primary-light)]'}`}>
+                <div onClick={() => setActiveBlogTab('CAMPAIGNS')} className={`rounded-lg cursor-pointer hover:bg-[var(--primary)]/60 duration-200 font-bold w-full text-center p-2 text-white ${activeBlogTab === 'CAMPAIGNS' ? 'bg-[var(--primary)]' : 'bg-[var(--primary-light)]'}`}>
                     Kampanyalar
                 </div>
-                <div onClick={()=>setActiveBlogTab('NEWS')} className={`rounded-lg cursor-pointer hover:bg-[var(--primary)]/60 duration-200 font-bold w-full text-center p-2 text-white ${activeBlogTab === 'NEWS' ? 'bg-[var(--primary)]' : 'bg-[var(--primary-light)]'}`}>
+                <div onClick={() => setActiveBlogTab('NEWS')} className={`rounded-lg cursor-pointer hover:bg-[var(--primary)]/60 duration-200 font-bold w-full text-center p-2 text-white ${activeBlogTab === 'NEWS' ? 'bg-[var(--primary)]' : 'bg-[var(--primary-light)]'}`}>
                     Haberler
                 </div>
-                <div onClick={()=>setActiveBlogTab('GUIDES')} className={`rounded-lg cursor-pointer hover:bg-[var(--primary)]/60 duration-200 font-bold w-full text-center p-2 text-white ${activeBlogTab === 'GUIDES' ? 'bg-[var(--primary)]' : 'bg-[var(--primary-light)]'}`}>
+                <div onClick={() => setActiveBlogTab('GUIDES')} className={`rounded-lg cursor-pointer hover:bg-[var(--primary)]/60 duration-200 font-bold w-full text-center p-2 text-white ${activeBlogTab === 'GUIDES' ? 'bg-[var(--primary)]' : 'bg-[var(--primary-light)]'}`}>
                     Rehberler
                 </div>
-                <div onClick={()=>setActiveBlogTab('BLOG')} className={`rounded-lg cursor-pointer hover:bg-[var(--primary)]/60 duration-200 font-bold w-full text-center p-2 text-white ${activeBlogTab === 'BLOG' ? 'bg-[var(--primary)]' : 'bg-[var(--primary-light)]'}`}>
+                <div onClick={() => setActiveBlogTab('BLOG')} className={`rounded-lg cursor-pointer hover:bg-[var(--primary)]/60 duration-200 font-bold w-full text-center p-2 text-white ${activeBlogTab === 'BLOG' ? 'bg-[var(--primary)]' : 'bg-[var(--primary-light)]'}`}>
                     Blog
                 </div>
             </div>

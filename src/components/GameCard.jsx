@@ -2,7 +2,7 @@ import React from 'react'
 
 const GameCard = () => {
     return (
-        <div className="h-[300px] min-w-[45vw] md:min-w-0 md:w-full bg-[url(/gta5.jpg)] bg-cover bg-center rounded-2xl md:rounded-lg relative">
+        <div className="h-[300px] min-w-[40vw] md:min-w-0 md:w-full bg-[url(/gta5.jpg)] bg-cover bg-center rounded-2xl md:rounded-lg relative">
             <div className="absolute right-2 top-2">
                 <div className="w-[25px] rounded-full h-[25px] flex items-center justify-center bg-black/70">
                     <svg className='text-white' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zm3.15.45l-4.15 2.5q-.275.175-.575.15t-.525-.2t-.35-.437t-.05-.588l1.1-4.725L3.775 10.8q-.25-.225-.312-.513t.037-.562t.3-.45t.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45t.537-.15t.537.15t.388.45l1.875 4.45l4.85.425q.35.05.55.225t.3.45t.038.563t-.313.512l-3.675 3.175l1.1 4.725q.075.325-.05.588t-.35.437t-.525.2t-.575-.15zm0-5.025" /></svg>

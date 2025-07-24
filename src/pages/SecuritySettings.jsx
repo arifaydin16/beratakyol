@@ -4,35 +4,35 @@ import ProfileLayout from '../layouts/ProfileLayout'
 const SecuritySettings = () => {
     return (
         <ProfileLayout>
-            <div className="col-span-3 bg-gray-100 rounded-lg p-4">
-                <div className="p-2 rounded-lg gap-4 grid md:grid-cols-2 bg-white">
+            <div className="col-span-3 bg-gray-100 dark:bg-stone-800 rounded-lg p-4">
+                <div className="p-2 rounded-lg dark:bg-stone-900 gap-4 grid md:grid-cols-2 bg-white">
                     <div className='flex justify-between p-2 border-b border-gray-300'>
                         <div className='text-sm'>2FA Doğrulama</div>
-                        <div className="checkbox-apple">
-                            <input className="yep" id="check-2fa" type="checkbox" />
-                            <label for="check-2fa"></label>
-                        </div>
+                        <label className="switch">
+                            <input type="checkbox" />
+                            <span className="slider"></span>
+                        </label>
                     </div>
                     <div className='flex justify-between p-2 border-b border-gray-300'>
                         <div className='text-sm'>Mail Doğrulama</div>
-                        <div className="checkbox-apple">
-                            <input className="yep" id="check-m" type="checkbox" />
-                            <label for="check-m"></label>
-                        </div>
+                        <label className="switch">
+                            <input type="checkbox" />
+                            <span className="slider"></span>
+                        </label>
                     </div>
                     <div className='flex justify-between p-2 border-b border-gray-300'>
                         <div className='text-sm'>SMS Doğrulama</div>
-                        <div className="checkbox-apple">
-                            <input className="yep" id="check-sms" type="checkbox" />
-                            <label for="check-sms"></label>
-                        </div>
+                        <label className="switch">
+                            <input type="checkbox" />
+                            <span className="slider"></span>
+                        </label>
                     </div>
                     <div className='flex justify-between p-2 border-b border-gray-300'>
                         <div className='text-sm'>KYC(Kimlik) Doğrulama</div>
-                        <div className="checkbox-apple">
-                            <input className="yep" id="check-kyc" type="checkbox" />
-                            <label for="check-kyc"></label>
-                        </div>
+                        <label className="switch">
+                            <input type="checkbox" />
+                            <span className="slider"></span>
+                        </label>
                     </div>
 
                 </div>

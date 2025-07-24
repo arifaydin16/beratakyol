@@ -99,7 +99,7 @@ const CartPage = () => {
                 </div>
                 <div className='col-span-2 md:mt-0 mt-12'>
                     <div className="text-2xl font-bold">Ödeme Özeti</div>
-                    <div className="mt-8 w-full rounded-2xl bg-[var(--gray-light)] p-4 flex flex-col gap-4">
+                    <div className="mt-8 w-full rounded-2xl bg-[var(--gray-light)] dark:bg-stone-800 p-4 flex flex-col gap-4">
                         <div className="flex justify-between items-center">
                             <div className="text-gray-500 text-sm md:text-xl">Sipariş Numarası</div>
                             <div className="text-[var(--primary)] font-bold text-sm md:text-xl">4687648754543</div>
@@ -118,17 +118,17 @@ const CartPage = () => {
                         </div>
                     </div>
                     <div className='border-t-2 border-black border-dashed mx-2'></div>
-                    <div className="w-full rounded-2xl bg-[var(--gray-light)] p-4 flex flex-col gap-4 relative">
+                    <div className="w-full rounded-2xl bg-[var(--gray-light)] dark:bg-stone-800 p-4 flex flex-col gap-4 relative">
                         <div className="flex justify-between items-center">
                             <div className="text-gray-500 text-sm md:text-xl">Genel Toplam</div>
                             <div className="text-[var(--primary)] font-bold text-sm md:text-xl">390.10 ₺</div>
                         </div>
-                        <div className='border-t-8 border-white border-dotted mx-2 absolute -bottom-1 h-[10px] w-full left-0'></div>
+                        <div className='border-t-8 border-white border-dotted dark:border-stone-900 mx-2 absolute -bottom-1 h-[10px] w-full left-0'></div>
                     </div>
                     <div className="mt-8">
                         <div>
                             <div className="text-gray-500 text-sm">İndirim Kodu</div>
-                            <input type="text" className='p-2 outline-none bg-white rounded-lg border border-gray-200 w-full' placeholder='İndirim Kodu' />
+                            <input type="text" className='p-2 outline-none bg-white dark:bg-stone-800 rounded-lg border border-gray-200 w-full' placeholder='İndirim Kodu' />
                         </div>
                     </div>
                     <div className="mt-8">
